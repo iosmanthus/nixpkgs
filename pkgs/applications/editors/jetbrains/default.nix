@@ -9,6 +9,7 @@
 , openssl
 , expat
 , vmopts ? null
+, versionsAttr ? null
 }:
 
 with lib;
@@ -19,7 +20,7 @@ let
 
   inherit (stdenv.hostPlatform) system;
 
-  versions = builtins.fromJSON (readFile (./versions.json));
+  versions = if (versionsAttr == null) then (builtins.fromJSON (builtins.readFile ./versions.json)) else versionsAttr;
   versionKey = if stdenv.isLinux then "linux" else system;
   products = versions.${versionKey} or (throw "Unsupported system: ${system}");
 
