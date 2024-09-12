@@ -18,7 +18,7 @@ rustPlatform.buildRustPackage rec {
     hash = "sha256-m6aluk/pHj42fKwcASoy8dagSxRw7WQjCq9FPn8M9Z8=";
   };
 
-  cargoHash = "sha256-VKqz/5jHOwDBNVFMFw0rxokXvCkXpzFgcWvJoJS8JBo=";
+  cargoHash = "sha256-O2wgBilVW65XckhCJlEohyorvR0LPCdM1oaYMbhibHs=";
 
   # used for "Server Installed" version in admin panel
   env.VW_VERSION = version;
