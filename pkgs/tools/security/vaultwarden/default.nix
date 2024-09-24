@@ -9,16 +9,16 @@ in
 
 rustPlatform.buildRustPackage rec {
   pname = "vaultwarden";
-  version = "unstable-2024-09-12";
+  version = "unstable-2024-09-24";
 
   src = fetchFromGitHub {
     owner = "dani-garcia";
     repo = "vaultwarden";
-    rev = "25d99e3506a01b7d031d12f51d69a3cae3149065";
-    hash = "sha256-m6aluk/pHj42fKwcASoy8dagSxRw7WQjCq9FPn8M9Z8=";
+    rev = "040e2a7bb0f2cc5012d46ca99283cf21fa06ed1a";
+    hash = "sha256-bjLa3/B+H49BHXU9xYAtoSsaJBtDJIm6+coGEplzxdM=";
   };
 
-  cargoHash = "sha256-O2wgBilVW65XckhCJlEohyorvR0LPCdM1oaYMbhibHs=";
+  cargoHash = "sha256-GMskxhSs0jNYPt+57VXijJntPCHJEYVwuNSZAOSPjMI=";
 
   # used for "Server Installed" version in admin panel
   env.VW_VERSION = version;
